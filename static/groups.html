@@ -6,39 +6,41 @@
 		<meta name="description"
 			value="Система Обліку Студентів Навчального Закладу"/>
 <link rel="stylesheet"
-			href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/main.css">
 
 			<style type=text/css>.col-xs-12, .col-xs-4, col-xs-8 </style>
 	</head>
 
 	<body>
-  <!-- Start Container -->
+
+<!-- Start Container -->
   <div class="container">
 
-    <!-- Start Header -->
-    <div class="row" id="header"> 
-      <div class="col-xs-8">
-        <h1>Сервіс Обліку Студентів</h1>
-      </div>
-      <div class="col-xs-4" id="group-selector">
-        <strong>Група:</strong>
-        <select>
-          <option value="">Усі Студенти</option>
-          <option value="">ІС-43, Маруся Перехрест</option>
-          <option value="">Іпф-22, Микола Голодний</option>
-        </select>
-      </div>
-    </div>
-    <!-- End Header -->
+<!-- Start Header -->		
+		<div class="row id="header"">
+		<div class="col-xs-8">
+			<h1>Сервіс Обліку Студентів</h1>
+		</div>
 
+		<div class="col-xs-4" id="group-selector">
+		<strong>Група:</strong>
+		<select>
+		<option value="">Усі Студенти</option>
+		<option value=""> Мкм - 21, Голодний Микола (No 25)</option>
+		<option value="">Жрл - 22, Перехрест Маруся (No 21)</option>
+</select>
+</div>
+</div>
+
+<!-- End Header -->
 <!-- Start SubHeader -->
 <div class="row" id="sub-header">
 <div class="col-xs-12">
 <ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"><a href="#">Студенти</a></li>
+<li role="presentation" class="#"><a href="#">Студенти</a></li>
 <li role="presentation"><a href="#">Відвідування</a></li>
-<li role="presentation"><a href="#">Групи</a></li>
+<li role="presentation" class="active"><a href="#">Групи</a></li>
 </ul>
 </div>
 </div>
@@ -49,29 +51,24 @@
 		<div class="col-xs-12" id="content-column">
 <!-- Status Message -->
 
-<h2>База студентів</h2>
+<h2>Групи</h2>
 <!-- Add Student Button -->
-<a class="btn btn-primary" href="#">Додати Студента</a>
+<a class="btn btn-primary" href="#">Додати Групу</a>
 <div><!-- Start Students Listing -->
 <table class="table table-hover table-striped">
 <thead>
 <tr>
 <th>No</th>
-<th>Фото</th>
-<th><a href="">Прізвище</th>
-<th><a href="#">Ім'я</th>
-<th><a href="#">No Білету</th>
+<th><a href="">Назва</th>
+<th><a href="#">Староста</th>
 <th>Дії</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>1</td>
-<td><img height="30" width="30" src="./img/s1.jpg" class="img-circle"
-></td>
-<td><a title="Редагувати" href="#">Білочка</td>
-<td><a title="Редагувати" href="#">Петро</td>
-<td>4715</td>
+<td><a title="Редагувати" href="#">Іп 13</td>
+<td><a title="Редагувати" href="#">Сергій Валігура</td>
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
 type="button" data-toggle="dropdown">Дія
@@ -92,11 +89,8 @@ href="#">Відвідування</a></li>
 </tr>
 <tr>
 <td>2</td>
-<td><img height="30" width="30" src="./img/s3.jpg" class="img-circle"
-></td>
-<td><a title="Редагувати" href="#">Іванович</td>
-<td><a title="Редагувати" href="#">Стартапер</td>
-<td>1324</td>
+<td><a title="Редагувати" href="#">Іф 42</td>
+<td><a title="Редагувати" href="#">Стефа Зайчиха</td>
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
 type="button" data-toggle="dropdown">Дія
@@ -118,11 +112,8 @@ href="#">Відвідування</a></li>
 
 <tr>
 <td>3</td>
-<td><img height="30" width="30" src="./img/s2.jpg" class="img-circle"
-></td>
-<td><a title="Редагувати" href="#">Пилипенко</td>
-<td><a title="Редагувати" href="#">Михась</td>
-<td>2001</td>
+<td><a title="Редагувати" href="#">Іпф 23</td>
+<td><a title="Редагувати" href="#">Володимир Перший</td>
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
 type="button" data-toggle="dropdown">Дія

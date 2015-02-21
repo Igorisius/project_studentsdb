@@ -1,0 +1,9 @@
+/* Global Styles */
+h1, h2, h3, h4, h5, h6 {
+font-weight: bold;
+}
+.alert {
+/* Ми додали відстань лише зверху елемента: -top */
+margin-top: 10px;
+}
+

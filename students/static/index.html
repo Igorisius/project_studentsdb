@@ -9,29 +9,30 @@
 			href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="./css/main.css">
 
-			<style type=text/css>.col-xs-12, .col-xs-4, col-xs-8 </style>
+			<style type=text/css>.col-xs-12, .col-xs-4, col-xs-8 {border: 1px solid black;}</style>
 	</head>
 
 	<body>
-  <!-- Start Container -->
-  <div class="container">
+<!-- Start Header -->		
+		<div class="container">
+		<div class="row id="header"">
+		<div class="col-xs.8">
+			Сервіс Обліку Студентів
+		</div>
 
-    <!-- Start Header -->
-    <div class="row" id="header"> 
-      <div class="col-xs-8">
-        <h1>Сервіс Обліку Студентів</h1>
-      </div>
-      <div class="col-xs-4" id="group-selector">
-        <strong>Група:</strong>
-        <select>
-          <option value="">Усі Студенти</option>
-          <option value="">ІС-43, Маруся Перехрест</option>
-          <option value="">Іпф-22, Микола Голодний</option>
-        </select>
-      </div>
-    </div>
-    <!-- End Header -->
+	
+		<div class="col-xs-4" id="group-selector">
+		<strong>Група:</strong>
+		<select>
+		<option value="">Усі Студенти</option>
+		<option value=""> Мкм - 21, Голодний Микола (No 25)</option>
+		<option value="">Жрл - 22, Перехрест Маруся (No 21)</option>
+</select>
+</div>
+</div>
 
+		</div>
+<!-- End Header -->
 <!-- Start SubHeader -->
 <div class="row" id="sub-header">
 <div class="col-xs-12">
@@ -48,6 +49,7 @@
 		<div class="row" id="content-columns">
 		<div class="col-xs-12" id="content-column">
 <!-- Status Message -->
+<div class="alert alert-warning">Зміни скасовано.</div>
 
 <h2>База студентів</h2>
 <!-- Add Student Button -->
