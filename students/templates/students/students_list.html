@@ -1,16 +1,59 @@
-{% extends "students/base.html" %}
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Сервіс Обліку Студентів</title>
+		<meta name="description"
+			value="Система Обліку Студентів Навчального Закладу"/>
+<link rel="stylesheet"
+			href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="./css/main.css">
 
-{% load static from staticfiles %}
+			<style type=text/css>.col-xs-12, .col-xs-4, col-xs-8 </style>
+	</head>
 
-{% block meta_title %}Студенти{% endblock meta_title %}
+	<body>
+  <!-- Start Container -->
+  <div class="container">
 
-{% block title %}База Студентів{% endblock title %}
+    <!-- Start Header -->
+    <div class="row" id="header"> 
+      <div class="col-xs-8">
+        <h1>Сервіс Обліку Студентів</h1>
+      </div>
+      <div class="col-xs-4" id="group-selector">
+        <strong>Група:</strong>
+        <select>
+          <option value="">Усі Студенти</option>
+          <option value="">ІС-43, Маруся Перехрест</option>
+          <option value="">Іпф-22, Микола Голодний</option>
+        </select>
+      </div>
+    </div>
+    <!-- End Header -->
 
-{% block content %}
-<a href="{% url "students_add" %}" class="btn btn-primary">Додати Студента</a>
+<!-- Start SubHeader -->
+<div class="row" id="sub-header">
+<div class="col-xs-12">
+<ul class="nav nav-tabs" role="tablist">
+<li role="presentation" class="active"><a href="{% url "home" %}">Студенти</a></li>
+<li role="presentation"><a href="/journal">Відвідування</a></li>
+<li role="presentation"><a href="{% url "groups" %}">Групи</a></li>
+</ul>
+</div>
+</div>
+<!-- End SubHeader -->
+		
+<!-- Start Main Page Content -->
+		<div class="row" id="content-columns">
+		<div class="col-xs-12" id="content-column">
+<!-- Status Message -->
 
-<!-- Start Students Listing -->
-<table class="table">
+<h2>База студентів</h2>
+<!-- Add Student Button -->
+<a class="btn btn-primary" href="{% url "students_add" %}">Додати Студента</a>
+<div><!-- Start Students Listing -->
+<table class="table table-hover table-striped">
 <thead>
 <tr>
 <th>No</th>
@@ -21,18 +64,14 @@
 <th>Дії</th>
 </tr>
 </thead>
-
 <tbody>
-{% for student in students %}
 <tr>
-<td>{{ forloop.counter }}</td>
-<td><img height="30" width="30" src="{% static student.image %}" class="img-circle"
+<td>1</td>
+<td><img height="30" width="30" src="./img/s1.jpg" class="img-circle"
 ></td>
-<td><a href="{% url "students_edit" student.id %}">{{ student.last_name }}</td>
-<td><a href="{% url "students_edit" student.id %}">{{ student.first_name }}</td>
-<td>{{ student.ticket }}</td>
-
-
+<td><a title="Редагувати" href="{% url "students_edit" 1 %}">Білочка</td>
+<td><a title="Редагувати" href="{% url "students_edit" 1 %}">Петро</td>
+<td>4715</td>
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
 type="button" data-toggle="dropdown">Дія
@@ -40,21 +79,71 @@ type="button" data-toggle="dropdown">Дія
 </button>
 <ul class="dropdown-menu" role="menu">
 <li role="presentation">
-<a role="menuitem" tabindex="-1" href="/journal/{{ student.id }}">Відвідування</a>
+<a role="menuitem" tabindex="-1"
+href="/journal/1">Відвідування</a></li>
 <li role="presentation">
-<a role="menuitem" tabindex="-1" href="{% url "students_edit" student.id %}">Редагувати</a>
+<a role="menuitem" tabindex="-1" href="{% url "students_edit" 1 %}">Редагувати</a>
 <li role="presentation">
-<a role="menuitem" tabindex="-1" href="{% url "students_delete" student.id %}
-">Видалити</a>
+<a role="menuitem" tabindex="-1" href="{% url "students_delete" 1 %}">Видалити</a>
 </li>
 </ul>
 </div>
 </td>
 </tr>
-    {% endfor %}
+<tr>
+<td>2</td>
+<td><img height="30" width="30" src="./img/s3.jpg" class="img-circle"
+></td>
+<td><a title="Редагувати" href="{% url "students_edit" 2 %}">Іванович</td>
+<td><a title="Редагувати" href="{% url "students_edit" 2 %}>Стартапер</td>
+<td>1324</td>
+<td><div class="dropdown">
+<button class="btn btn-default dropdown-toggle"
+type="button" data-toggle="dropdown">Дія
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li role="presentation">
+<a role="menuitem" tabindex="-1"
+href="/journal/2">Відвідування</a></li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="{% url "students_edit" 2 %}">Редагувати</a>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="{% url "students_delete" 1 %}">Видалити</a>
+</li>
+</ul>
+</div>
+</td>
+</tr>
 
+<tr>
+<td>3</td>
+<td><img height="30" width="30" src="./img/s2.jpg" class="img-circle"
+></td>
+<td><a title="Редагувати" href="{% url "students_edit" 3 %}">Пилипенко</td>
+<td><a title="Редагувати" href="{% url "students_edit" 3 %}">Михась</td>
+<td>2001</td>
+<td><div class="dropdown">
+<button class="btn btn-default dropdown-toggle"
+type="button" data-toggle="dropdown">Дія
+<span class="caret"></span>
+</button>
+<ul class="dropdown-menu" role="menu">
+<li role="presentation">
+<a role="menuitem" tabindex="-1"
+href="/journal/3">Відвідування</a></li>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="{% url "students_edit" 3 %}">Редагувати</a>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="{% url "students_delete" 3 %}">Видалити</a>
+</li>
+</ul>
+</div>
+</td>
+</tr>
 </tbody>
 </table>
+
 
 <nav>
 <ul class="pagination">
@@ -69,4 +158,32 @@ type="button" data-toggle="dropdown">Дія
 </nav>
 
 <!-- End Students Listing -->
-{% endblock content %}
+
+
+</div>
+
+</div>
+</div>
+<!-- End Main Page Content -->
+
+		</div>
+		</div>
+<!-- End Page Content -->
+<!-- Start Footer -->
+
+	<div class="row" id="footer">
+	<div class="col-xs-12">
+	&copy; 2014 Сервіс Обліку Студентів
+	</div>
+	</div>
+	</div>
+
+<!-- End Footer -->
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/
+jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
