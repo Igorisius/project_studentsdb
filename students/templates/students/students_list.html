@@ -1,3 +1,6 @@
+{% load static from staticfiles %}
+
+
 <!DOCTYPE html>
 <html lang="uk">
 	<head>
@@ -7,7 +10,7 @@
 			value="Система Обліку Студентів Навчального Закладу"/>
 <link rel="stylesheet"
 			href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="./css/main.css">
+<link rel="stylesheet" href="{% static "css/main.css" %}">
 
 			<style type=text/css>.col-xs-12, .col-xs-4, col-xs-8 </style>
 	</head>
@@ -67,10 +70,10 @@
 <tbody>
 <tr>
 <td>1</td>
-<td><img height="30" width="30" src="./img/s1.jpg" class="img-circle"
+<td><img height="30" width="30" src="{% static "img/s1.jpg" %}" class="img-circle"
 ></td>
 <td><a title="Редагувати" href="{% url "students_edit" 1 %}">Білочка</td>
-<td><a title="Редагувати" href="{% url "students_edit" 1 %}">Петро</td>
+<td><a title="Редагувати" href="{% url "students_edit" 1 %}">Ivan</td>
 <td>4715</td>
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
@@ -92,10 +95,10 @@ href="/journal/1">Відвідування</a></li>
 </tr>
 <tr>
 <td>2</td>
-<td><img height="30" width="30" src="./img/s3.jpg" class="img-circle"
+<td><img height="30" width="30" src="{% static "img/s3.jpg" %}" class="img-circle"
 ></td>
 <td><a title="Редагувати" href="{% url "students_edit" 2 %}">Іванович</td>
-<td><a title="Редагувати" href="{% url "students_edit" 2 %}>Стартапер</td>
+<td><a title="Редагувати" href="{% url "students_edit" 2 %}">Стартапер</td>
 <td>1324</td>
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
@@ -109,7 +112,7 @@ href="/journal/2">Відвідування</a></li>
 <li role="presentation">
 <a role="menuitem" tabindex="-1" href="{% url "students_edit" 2 %}">Редагувати</a>
 <li role="presentation">
-<a role="menuitem" tabindex="-1" href="{% url "students_delete" 1 %}">Видалити</a>
+<a role="menuitem" tabindex="-1" href="{% url "students_delete" 2 %}">Видалити</a>
 </li>
 </ul>
 </div>
@@ -118,7 +121,7 @@ href="/journal/2">Відвідування</a></li>
 
 <tr>
 <td>3</td>
-<td><img height="30" width="30" src="./img/s2.jpg" class="img-circle"
+<td><img height="30" width="30" src="{% static "img/s2.jpg" %}" class="img-circle"
 ></td>
 <td><a title="Редагувати" href="{% url "students_edit" 3 %}">Пилипенко</td>
 <td><a title="Редагувати" href="{% url "students_edit" 3 %}">Михась</td>
