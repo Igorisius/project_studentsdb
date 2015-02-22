@@ -1,58 +1,13 @@
+{% extends "students/base.html" %}
+
 {% load static from staticfiles %}
 
+{% block meta_title %}Студенти{% endblock meta_title %}
 
-<!DOCTYPE html>
-<html lang="uk">
-	<head>
-		<meta charset="UTF-8"/>
-		<title>Сервіс Обліку Студентів</title>
-		<meta name="description"
-			value="Система Обліку Студентів Навчального Закладу"/>
-<link rel="stylesheet"
-			href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="{% static "css/main.css" %}">
+{% block title %}База Студентів{% endblock title %}
 
-			<style type=text/css>.col-xs-12, .col-xs-4, col-xs-8 </style>
-	</head>
+{% block content %}
 
-	<body>
-  <!-- Start Container -->
-  <div class="container">
-
-    <!-- Start Header -->
-    <div class="row" id="header"> 
-      <div class="col-xs-8">
-        <h1>Сервіс Обліку Студентів</h1>
-      </div>
-      <div class="col-xs-4" id="group-selector">
-        <strong>Група:</strong>
-        <select>
-          <option value="">Усі Студенти</option>
-          <option value="">ІС-43, Маруся Перехрест</option>
-          <option value="">Іпф-22, Микола Голодний</option>
-        </select>
-      </div>
-    </div>
-    <!-- End Header -->
-
-<!-- Start SubHeader -->
-<div class="row" id="sub-header">
-<div class="col-xs-12">
-<ul class="nav nav-tabs" role="tablist">
-<li role="presentation" class="active"><a href="{% url "home" %}">Студенти</a></li>
-<li role="presentation"><a href="/journal">Відвідування</a></li>
-<li role="presentation"><a href="{% url "groups" %}">Групи</a></li>
-</ul>
-</div>
-</div>
-<!-- End SubHeader -->
-		
-<!-- Start Main Page Content -->
-		<div class="row" id="content-columns">
-		<div class="col-xs-12" id="content-column">
-<!-- Status Message -->
-
-<h2>База студентів</h2>
 <!-- Add Student Button -->
 <a class="btn btn-primary" href="{% url "students_add" %}">Додати Студента</a>
 <div><!-- Start Students Listing -->
@@ -116,32 +71,5 @@ href="/journal/{{ student.id }}">Відвідування</a></li>
 </nav>
 
 <!-- End Students Listing -->
+{% endblock content %}
 
-
-</div>
-
-</div>
-</div>
-<!-- End Main Page Content -->
-
-		</div>
-		</div>
-<!-- End Page Content -->
-<!-- Start Footer -->
-
-	<div class="row" id="footer">
-	<div class="col-xs-12">
-	&copy; 2014 Сервіс Обліку Студентів
-	</div>
-	</div>
-	</div>
-
-<!-- End Footer -->
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/
-jquery.js"></script>
-<script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-
-
-</body>
-</html>
