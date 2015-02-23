@@ -2,23 +2,23 @@
 
 {% load static from staticfiles %}
 
-{% block meta_title %}Студенти{% endblock meta_title %}
 
-{% block title %}База Студентів{% endblock title %}
+{% block meta_title %}Групи{% endblock meta_title %}
+
+{% block title %}Додати Групу{% endblock title %}
 
 {% block content %}
 
-<!-- Add Student Button -->
-<a class="btn btn-primary" href="{% url "students_add" %}">Додати Студента</a>
-<div><!-- Start Students Listing -->
+
+<!-- Add Group Button -->
+<a class="btn btn-primary" href="{% url "groups_add" %}">Додати Групу</a>
+<div><!-- Start Groups Listing -->
 <table class="table table-hover table-striped">
 <thead>
 <tr>
 <th>No</th>
-<th>Фото</th>
-<th><a href="">Прізвище</th>
-<th><a href="#">Ім'я</th>
-<th><a href="#">No Білету</th>
+<th><a href="">Назва</th>
+<th><a href="#">Староста</th>
 <th>Дії</th>
 </tr>
 </thead>
@@ -26,10 +26,8 @@
 {% for student in students %}
 <tr>
 <td>{{ forloop.counter }}</td>
-<td><img height="30" width="30" src="{% static student.image %}" class="img-circle"></td>
-<td><a href="{% url "students_edit" student.id %}">{{ student.last_name }}</td>
-<td><a href="{% url "students_edit" student.id %}">{{ student.first_name }}</td>
-<td>{{ student.ticket }}</td>
+<td><a href="{% url "groups_edit" group.id %}">{{ group.group_number }}</td>
+<td><a href="{% url "groups_edit" group.id %}">{{ group.group_leader }}</td>
 
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
@@ -37,23 +35,19 @@ type="button" data-toggle="dropdown">Дія
 <span class="caret"></span>
 </button>
 <ul class="dropdown-menu" role="menu">
-
-<li role="presentation">
-<a role="menuitem" tabindex="-1" href="{% url "students_edit" student.id %}">Редагувати</a>
-
 <li role="presentation">
 <a role="menuitem" tabindex="-1"
 href="/journal/{{ student.id }}">Відвідування</a></li>
-
 <li role="presentation">
-<a role="menuitem" tabindex="-1" href="{% url "students_delete" student.id %}">Видалити</a>
+<a role="menuitem" tabindex="-1" href="{% url "groups_edit" group.id %}">Редагувати</a>
+<li role="presentation">
+<a role="menuitem" tabindex="-1" href="{% url "groups_delete" group.id %}">Видалити</a>
 </li>
 </ul>
 </div>
 </td>
 </tr>
 {% endfor %}
-
 
 </tbody>
 </table>
@@ -70,7 +64,5 @@ href="/journal/{{ student.id }}">Відвідування</a></li>
 <li><a href="#">&raquo;</a></li>
 </ul>
 </nav>
-
-<!-- End Students Listing -->
 {% endblock content %}
-
+<!-- End Groups Listing -->

@@ -30,6 +30,7 @@
 <td><a href="{% url "students_edit" student.id %}">{{ student.last_name }}</td>
 <td><a href="{% url "students_edit" student.id %}">{{ student.first_name }}</td>
 <td>{{ student.ticket }}</td>
+
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"
 type="button" data-toggle="dropdown">Дія
