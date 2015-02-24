@@ -25,16 +25,16 @@
     <!-- Start Header -->
     <div class="row" id="header"> 
       <div class="col-xs-8">
-        <h1>Сервіс Обліку Студентів</h1>
+       <h1>Сервіс Обліку Студентів {% block logo %}{% endblock logo %}</h1>
       </div>
-      <div class="col-xs-4" id="group-selector">
+      <div class="col-xs-4" id="group-selector">{% block groups_menu %}
         <strong>Група:</strong>
         <select>
           <option value="">Усі Студенти</option>
           <option value="">ІС-43, Маруся Перехрест</option>
           <option value="">Іпф-22, Микола Голодний</option>
         </select>
-      </div>
+      {% endblock groups_menu %}</div>
     </div>
     <!-- End Header -->
 
@@ -70,11 +70,11 @@ class="active"{% endif %}>
 <!-- End Page Content -->
 <!-- Start Footer -->
 
-	<div class="row" id="footer">
+	<div class="row" id="footer">{% block footer %}
 	<div class="col-xs-12">
 	&copy; 2014 Сервіс Обліку Студентів
 	</div>
-	</div>
+	{% endblock footer %}</div>
 <!-- End Footer -->
 <!-- End Container -->
 </div>

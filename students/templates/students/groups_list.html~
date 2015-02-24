@@ -6,7 +6,7 @@
 {% block meta_title %}Групи{% endblock meta_title %}
 
 {% block title %}Додати Групу{% endblock title %}
-
+{% block groups_menu %}і чьо?{% endblock groups_menu %}
 {% block content %}
 
 
@@ -23,7 +23,7 @@
 </tr>
 </thead>
 <tbody>
-{% for student in students %}
+{% for group in groups %}
 <tr>
 <td>{{ forloop.counter }}</td>
 <td><a href="{% url "groups_edit" group.id %}">{{ group.group_number }}</td>
@@ -66,3 +66,4 @@ href="/journal/{{ student.id }}">Відвідування</a></li>
 </nav>
 {% endblock content %}
 <!-- End Groups Listing -->
+
