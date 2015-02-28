@@ -45,8 +45,5 @@ class Student(models.Model):
     notes = models.TextField(
         blank=True,
         verbose_name=u"Додаткові нотатки")
-    
-    def __unicode__(self):
-        return u"%s %s" % (self.first_name, self.last_name)
 
 # Create your models here.

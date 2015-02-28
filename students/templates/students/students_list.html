@@ -26,7 +26,13 @@
 {% for student in students %}
 <tr>
 <td>{{ forloop.counter }}</td>
-<td><img height="30" width="30" src="{% static student.image %}" class="img-circle"></td>
+<td>
+{% if student.photo %}
+<img height="30" width="30" src="{{ student.photo.url }}" class="img-circle">
+{% else %}
+<img class="img-circle" src="{% static 'img/default_user.jpg' %}" height="30" width="30">
+{% endif %}
+</td>
 <td><a href="{% url "students_edit" student.id %}">{{ student.last_name }}</td>
 <td><a href="{% url "students_edit" student.id %}">{{ student.first_name }}</td>
 <td>{{ student.ticket }}</td>
@@ -58,7 +64,6 @@ href="/journal/{{ student.id }}">Відвідування</a></li>
 </tbody>
 </table>
 
-
 <nav>
 <ul class="pagination">
 <li><a href="#">&laquo;</a></li>
@@ -73,4 +78,5 @@ href="/journal/{{ student.id }}">Відвідування</a></li>
 
 <!-- End Students Listing -->
 {% endblock content %}
+
 
