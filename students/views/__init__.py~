@@ -6,4 +6,4 @@ from groups import groups_list
 from groups import groups_add
 from groups import groups_edit
 from groups import groups_delete
-from journal import
+
