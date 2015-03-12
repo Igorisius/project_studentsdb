@@ -5,7 +5,7 @@
 
 {% block meta_title %}Групи{% endblock meta_title %}
 
-{% block title %}Додати Групу{% endblock title %}
+{% block title %}База Груп{% endblock title %}
 
 {% block content %}
 
@@ -26,8 +26,8 @@
 {% for group in groups %}
 <tr>
 <td>{{ forloop.counter }}</td>
-<td><a href="{% url "groups_edit" group.id %}">{{ group.group_number }}</td>
-<td><a href="{% url "groups_edit" group.id %}">{{ group.group_leader }}</td>
+<td><a href="{% url "groups_edit" group.id %}">{{ group.title }}</td>
+<td><a href="{% url "groups_edit" group.id %}">{{ group.leader }}</td>
 
 <td><div class="dropdown">
 <button class="btn btn-default dropdown-toggle"

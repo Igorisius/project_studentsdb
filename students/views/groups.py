@@ -2,20 +2,13 @@
 
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
+from ..models import Group
 # Views for Groups
 def groups_list(request):
-    groups = (
-        {'id': 1,
-        'group_number': u'Іп 13',
-        'group_leader': u'Сергій Валігура'},
-        {'id': 2,
-        'group_number': u'Іф 42',
-        'group_leader': u'Стефа Зайчиха'},
-        {'id': 3,
-        'group_number': u'Іпф 23',
-        'group_leader': u'Володимир Перший'},
-    )   
+    groups = Group.objects.all()
+
     return render(request, 'students/groups_list.html',
         {'groups': groups})
 
