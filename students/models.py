@@ -51,7 +51,7 @@ class Student(models.Model):
 
 
 class Group(models.Model):
-    """Student Model"""
+    """Group Model"""
 
     class Meta(object):
         verbose_name = u"Група"

@@ -9,9 +9,9 @@
 {% block content %}
 
 <!-- Add Student Button -->
-<a class="btn btn-primary" href="{% url "students_add" %}">Додати Студента</a>
-<div><!-- Start Students Listing -->
-<table class="table table-hover table-striped">
+     <a class="btn btn-primary" href="{% url "students_add" %}">Додати Студента</a>
+     <div><!-- Start Students Listing -->
+     <table class="table table-hover table-striped">
 {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
 
 <thead>
@@ -40,7 +40,7 @@
     <th>Дії</th>
         </tr>
         </thead>
-    {% endwith %}
+{% endwith %}
 
 <tbody>
     {% for student in students %}
@@ -76,13 +76,13 @@
 
 </tbody>
 </table>
-{% if students.has_other_pages %}
-{% with order_by=request.GET.order_by reverse=request.GET.reverse %}
+     {% if students.has_other_pages %}
+         {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
 
     <nav>
         <ul class="pagination">
             <li><a href="{% url "home" %}?page=1&amp;order_by{{ order_by }}&amp;reverse={{ reverse }}">&laquo;</a></li>
-    {% for p in students.paginator.page_range %}
+     {% for p in students.paginator.page_range %}
             <li {% if students.number == p %}class="active"{% endif %}>
                 <a href="{% url "home" %}?page={{ p }}&amp;order_by={{ order_by }}&amp;reverse={{ reverse }}">{{ p }}</a>
                   </li>
