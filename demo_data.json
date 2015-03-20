@@ -1,0 +1,880 @@
+[
+{
+    "fields": {
+        "model": "logentry",
+        "name": "log entry",
+        "app_label": "admin"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 1
+},
+{
+    "fields": {
+        "model": "permission",
+        "name": "permission",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 2
+},
+{
+    "fields": {
+        "model": "group",
+        "name": "group",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 3
+},
+{
+    "fields": {
+        "model": "user",
+        "name": "user",
+        "app_label": "auth"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 4
+},
+{
+    "fields": {
+        "model": "contenttype",
+        "name": "content type",
+        "app_label": "contenttypes"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 5
+},
+{
+    "fields": {
+        "model": "session",
+        "name": "session",
+        "app_label": "sessions"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 6
+},
+{
+    "fields": {
+        "model": "student",
+        "name": "student",
+        "app_label": "students"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 7
+},
+{
+    "fields": {
+        "model": "group",
+        "name": "\u0413\u0440\u0443\u043f\u0430",
+        "app_label": "students"
+    },
+    "model": "contenttypes.contenttype",
+    "pk": 8
+},
+{
+    "fields": {
+        "expire_date": "2015-03-12T22:09:37.216Z",
+        "session_data": "MTdmMzI1ZGNkNDY1YzMzZDFhM2JkZmJjZmJhNTg5NGEzNWUwMzg3Mjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZhZjJkYjkyODAxMDI3MmMwYzA4ZDhkNzA2MGFlYjlhZGExMmU0MzkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjJ9"
+    },
+    "model": "sessions.session",
+    "pk": "wi846liqh2mx294v7i2rqmcu8mv66s3z"
+},
+{
+    "fields": {
+        "expire_date": "2015-03-27T15:57:41.742Z",
+        "session_data": "MTdmMzI1ZGNkNDY1YzMzZDFhM2JkZmJjZmJhNTg5NGEzNWUwMzg3Mjp7Il9hdXRoX3VzZXJfaGFzaCI6ImZhZjJkYjkyODAxMDI3MmMwYzA4ZDhkNzA2MGFlYjlhZGExMmU0MzkiLCJfYXV0aF91c2VyX2JhY2tlbmQiOiJkamFuZ28uY29udHJpYi5hdXRoLmJhY2tlbmRzLk1vZGVsQmFja2VuZCIsIl9hdXRoX3VzZXJfaWQiOjJ9"
+    },
+    "model": "sessions.session",
+    "pk": "xsbvii5c5y67ktocg89z8patm2bcgv1z"
+},
+{
+    "fields": {
+        "first_name": "\u0406\u0432\u0430\u043d",
+        "last_name": "\u0421\u0438\u043b\u0430\u0447",
+        "middle_name": "\u041e\u043b\u0435\u043a\u0441\u0456\u0439\u043e\u0432\u0438\u0447",
+        "photo": "",
+        "notes": "\u041a\u0430\u043d\u0434\u0438\u0434\u0430\u0442 \u043d\u0430 \u0441\u0442\u0430\u0440\u043e\u0441\u0442\u0443 \u0433\u0440\u0443\u043f\u0438",
+        "student_group": null,
+        "birthday": "1983-02-23",
+        "ticket": "234"
+    },
+    "model": "students.student",
+    "pk": 1
+},
+{
+    "fields": {
+        "first_name": "\u041e\u043b\u0435\u043a\u0441\u0430",
+        "last_name": "\u041a\u043e\u0440\u043d\u0435\u043b\u044c",
+        "middle_name": "",
+        "photo": "",
+        "notes": "",
+        "student_group": null,
+        "birthday": "2015-03-02",
+        "ticket": "934"
+    },
+    "model": "students.student",
+    "pk": 2
+},
+{
+    "fields": {
+        "first_name": "\u041f\u0435\u0442\u0440\u043e",
+        "last_name": "\u0412\u043e\u043b\u043e\u0449\u0443\u043a",
+        "middle_name": "",
+        "photo": "",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1994-02-28",
+        "ticket": "214"
+    },
+    "model": "students.student",
+    "pk": 3
+},
+{
+    "fields": {
+        "first_name": "\u0421\u0435\u0440\u0433\u0456\u0439",
+        "last_name": "\u0412\u0430\u0440\u0442\u043e\u0432\u0438\u0439",
+        "middle_name": "",
+        "photo": "./s3.jpg",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1991-02-04",
+        "ticket": "356"
+    },
+    "model": "students.student",
+    "pk": 4
+},
+{
+    "fields": {
+        "first_name": "\u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440",
+        "last_name": "\u041f\u0430\u0440\u043a\u0430\u043d",
+        "middle_name": "",
+        "photo": "./s4.jpg",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1995-03-01",
+        "ticket": "333"
+    },
+    "model": "students.student",
+    "pk": 5
+},
+{
+    "fields": {
+        "first_name": "\u042f\u043a\u0456\u0432",
+        "last_name": "\u0411\u043e\u0440\u0435\u0446\u044c",
+        "middle_name": "",
+        "photo": "",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1985-05-03",
+        "ticket": "564"
+    },
+    "model": "students.student",
+    "pk": 6
+},
+{
+    "fields": {
+        "first_name": "\u0412\u0430\u0441\u0438\u043b\u044c",
+        "last_name": "\u0425\u043e\u0442\u043a\u0435\u0432\u0438\u0447",
+        "middle_name": "",
+        "photo": "",
+        "notes": "",
+        "student_group": null,
+        "birthday": "1987-01-23",
+        "ticket": "768"
+    },
+    "model": "students.student",
+    "pk": 7
+},
+{
+    "fields": {
+        "notes": "",
+        "leader": 1,
+        "title": "LRR 44"
+    },
+    "model": "students.group",
+    "pk": 1
+},
+{
+    "fields": {
+        "notes": "\u043c\u0430\u0433\u0456\u0441\u0442\u0440\u0438",
+        "leader": 6,
+        "title": "ZFE 13"
+    },
+    "model": "students.group",
+    "pk": 2
+},
+{
+    "fields": {
+        "notes": "",
+        "leader": null,
+        "title": "LUU 22"
+    },
+    "model": "students.group",
+    "pk": 3
+},
+{
+    "fields": {
+        "notes": "",
+        "leader": 7,
+        "title": "VCB 31"
+    },
+    "model": "students.group",
+    "pk": 4
+},
+{
+    "fields": {
+        "notes": "\u043f\u0435\u0440\u0448\u0438\u0439 \u043a\u0443\u0440\u0441",
+        "leader": 2,
+        "title": "CDF 11"
+    },
+    "model": "students.group",
+    "pk": 5
+},
+{
+    "fields": {
+        "notes": "",
+        "leader": 3,
+        "title": "FER 24"
+    },
+    "model": "students.group",
+    "pk": 6
+},
+{
+    "fields": {
+        "notes": "",
+        "leader": null,
+        "title": "IPF 23"
+    },
+    "model": "students.group",
+    "pk": 7
+},
+{
+    "fields": {
+        "codename": "add_logentry",
+        "name": "Can add log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 1
+},
+{
+    "fields": {
+        "codename": "change_logentry",
+        "name": "Can change log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 2
+},
+{
+    "fields": {
+        "codename": "delete_logentry",
+        "name": "Can delete log entry",
+        "content_type": 1
+    },
+    "model": "auth.permission",
+    "pk": 3
+},
+{
+    "fields": {
+        "codename": "add_permission",
+        "name": "Can add permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 4
+},
+{
+    "fields": {
+        "codename": "change_permission",
+        "name": "Can change permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 5
+},
+{
+    "fields": {
+        "codename": "delete_permission",
+        "name": "Can delete permission",
+        "content_type": 2
+    },
+    "model": "auth.permission",
+    "pk": 6
+},
+{
+    "fields": {
+        "codename": "add_group",
+        "name": "Can add group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 7
+},
+{
+    "fields": {
+        "codename": "change_group",
+        "name": "Can change group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 8
+},
+{
+    "fields": {
+        "codename": "delete_group",
+        "name": "Can delete group",
+        "content_type": 3
+    },
+    "model": "auth.permission",
+    "pk": 9
+},
+{
+    "fields": {
+        "codename": "add_user",
+        "name": "Can add user",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 10
+},
+{
+    "fields": {
+        "codename": "change_user",
+        "name": "Can change user",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 11
+},
+{
+    "fields": {
+        "codename": "delete_user",
+        "name": "Can delete user",
+        "content_type": 4
+    },
+    "model": "auth.permission",
+    "pk": 12
+},
+{
+    "fields": {
+        "codename": "add_contenttype",
+        "name": "Can add content type",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 13
+},
+{
+    "fields": {
+        "codename": "change_contenttype",
+        "name": "Can change content type",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 14
+},
+{
+    "fields": {
+        "codename": "delete_contenttype",
+        "name": "Can delete content type",
+        "content_type": 5
+    },
+    "model": "auth.permission",
+    "pk": 15
+},
+{
+    "fields": {
+        "codename": "add_session",
+        "name": "Can add session",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 16
+},
+{
+    "fields": {
+        "codename": "change_session",
+        "name": "Can change session",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 17
+},
+{
+    "fields": {
+        "codename": "delete_session",
+        "name": "Can delete session",
+        "content_type": 6
+    },
+    "model": "auth.permission",
+    "pk": 18
+},
+{
+    "fields": {
+        "codename": "add_student",
+        "name": "Can add student",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 19
+},
+{
+    "fields": {
+        "codename": "change_student",
+        "name": "Can change student",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 20
+},
+{
+    "fields": {
+        "codename": "delete_student",
+        "name": "Can delete student",
+        "content_type": 7
+    },
+    "model": "auth.permission",
+    "pk": 21
+},
+{
+    "fields": {
+        "codename": "add_group",
+        "name": "Can add \u0413\u0440\u0443\u043f\u0430",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 22
+},
+{
+    "fields": {
+        "codename": "change_group",
+        "name": "Can change \u0413\u0440\u0443\u043f\u0430",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 23
+},
+{
+    "fields": {
+        "codename": "delete_group",
+        "name": "Can delete \u0413\u0440\u0443\u043f\u0430",
+        "content_type": 8
+    },
+    "model": "auth.permission",
+    "pk": 24
+},
+{
+    "fields": {
+        "username": "admin",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2014-12-16T20:57:41.016Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$x6071nGMZK9o$ICLKPVxKXZM9++DVFMKsN628PTSetz7RT+I485j4rb8=",
+        "email": "admin@admin.com",
+        "date_joined": "2014-12-16T20:57:41.016Z"
+    },
+    "model": "auth.user",
+    "pk": 1
+},
+{
+    "fields": {
+        "username": "ihorko",
+        "first_name": "",
+        "last_name": "",
+        "is_active": true,
+        "is_superuser": true,
+        "is_staff": true,
+        "last_login": "2015-03-13T15:57:41.420Z",
+        "groups": [],
+        "user_permissions": [],
+        "password": "pbkdf2_sha256$12000$vqYVQlBkzdp1$0B6vLoBsIEVMQDh881n2jEUKKzEtCnNl0UZMLWOn+yc=",
+        "email": "ihorko@gmail.com",
+        "date_joined": "2015-02-26T22:07:17.760Z"
+    },
+    "model": "auth.user",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-02-26T22:24:11.103Z",
+        "object_repr": "\u0406\u0432\u0430\u043d \u0421\u0438\u043b\u0430\u0447",
+        "object_id": "1",
+        "change_message": "Changed first_name, last_name, middle_name, birthday and notes.",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 1
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-02-28T13:01:20.790Z",
+        "object_repr": "\u041f\u0435\u0442\u0440\u043e \u0412\u043e\u043b\u043e\u0449\u0443\u043a",
+        "object_id": "3",
+        "change_message": "",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 2
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-02-28T13:02:39.603Z",
+        "object_repr": "\u0421\u0435\u0440\u0433\u0456\u0439 \u0412\u0430\u0440\u0442\u043e\u0432\u0438\u0439",
+        "object_id": "4",
+        "change_message": "",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 3
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-02-28T15:15:45.297Z",
+        "object_repr": "\u0421\u0435\u0440\u0433\u0456\u0439 \u0412\u0430\u0440\u0442\u043e\u0432\u0438\u0439",
+        "object_id": "4",
+        "change_message": "Changed photo.",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 4
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-01T09:40:58.731Z",
+        "object_repr": "\u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440 \u041f\u0430\u0440\u043a\u0430\u043d",
+        "object_id": "5",
+        "change_message": "",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 5
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-02T17:07:16.265Z",
+        "object_repr": "\u041e\u043b\u0435\u043a\u0441\u0430 \u041a\u043e\u0440\u043d\u0435\u043b\u044c",
+        "object_id": "2",
+        "change_message": "Changed first_name and last_name.",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 6
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-03T18:08:27.862Z",
+        "object_repr": "\u042f\u043a\u0456\u0432 \u0411\u043e\u0440\u0435\u0446\u044c",
+        "object_id": "6",
+        "change_message": "",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 7
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-03T18:09:06.171Z",
+        "object_repr": "\u0412\u0430\u0441\u0438\u043b\u044c \u0425\u043e\u0442\u043a\u0435\u0432\u0438\u0447",
+        "object_id": "7",
+        "change_message": "",
+        "user": 2,
+        "content_type": 7
+    },
+    "model": "admin.logentry",
+    "pk": 8
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-12T17:27:15.063Z",
+        "object_repr": "IPP (\u042f\u043a\u0456\u0432 \u0411\u043e\u0440\u0435\u0446\u044c)",
+        "object_id": "2",
+        "change_message": "",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 9
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-12T17:27:42.657Z",
+        "object_repr": "\u0420\u0423\u041a",
+        "object_id": "3",
+        "change_message": "",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 10
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-12T17:28:00.879Z",
+        "object_repr": "\u041f\u0420\u041a",
+        "object_id": "4",
+        "change_message": "",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 11
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-12T17:28:21.251Z",
+        "object_repr": "\u0412\u0410\u0406 (\u041e\u043b\u0435\u043a\u0441\u0430 \u041a\u043e\u0440\u043d\u0435\u043b\u044c)",
+        "object_id": "5",
+        "change_message": "",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 12
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-12T17:28:32.630Z",
+        "object_repr": "\u0410\u041a\u041a",
+        "object_id": "6",
+        "change_message": "",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 13
+},
+{
+    "fields": {
+        "action_flag": 1,
+        "action_time": "2015-03-12T17:28:40.377Z",
+        "object_repr": "\u041f\u0423\u0423",
+        "object_id": "7",
+        "change_message": "",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 14
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:29:03.956Z",
+        "object_repr": "\u0406\u041f\u0424 23",
+        "object_id": "7",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 15
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:29:16.009Z",
+        "object_repr": "\u0406\u041f\u0424 13 (\u042f\u043a\u0456\u0432 \u0411\u043e\u0440\u0435\u0446\u044c)",
+        "object_id": "2",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 16
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:29:27.563Z",
+        "object_repr": "\u0406\u041f\u0424 44 (\u0406\u0432\u0430\u043d \u0421\u0438\u043b\u0430\u0447)",
+        "object_id": "1",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 17
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:29:41.473Z",
+        "object_repr": "\u0406\u041f\u0424 22",
+        "object_id": "3",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 18
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:29:55.657Z",
+        "object_repr": "\u0406\u041f\u0424 31",
+        "object_id": "4",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 19
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:30:06.859Z",
+        "object_repr": "\u0406\u041f\u0424 11 (\u041e\u043b\u0435\u043a\u0441\u0430 \u041a\u043e\u0440\u043d\u0435\u043b\u044c)",
+        "object_id": "5",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 20
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:30:22.518Z",
+        "object_repr": "\u0406\u041f\u0420 24",
+        "object_id": "6",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 21
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-12T17:37:33.627Z",
+        "object_repr": "IPF 23",
+        "object_id": "7",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 22
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:58:09.631Z",
+        "object_repr": "\u0406\u041f\u0420 24 (\u041f\u0435\u0442\u0440\u043e \u0412\u043e\u043b\u043e\u0449\u0443\u043a)",
+        "object_id": "6",
+        "change_message": "Changed leader.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 23
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:58:22.544Z",
+        "object_repr": "FER 24 (\u041f\u0435\u0442\u0440\u043e \u0412\u043e\u043b\u043e\u0449\u0443\u043a)",
+        "object_id": "6",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 24
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:58:31.750Z",
+        "object_repr": "CDF 11 (\u041e\u043b\u0435\u043a\u0441\u0430 \u041a\u043e\u0440\u043d\u0435\u043b\u044c)",
+        "object_id": "5",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 25
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:58:42.957Z",
+        "object_repr": "VCB 31 (\u0412\u0430\u0441\u0438\u043b\u044c \u0425\u043e\u0442\u043a\u0435\u0432\u0438\u0447)",
+        "object_id": "4",
+        "change_message": "Changed title and leader.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 26
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:58:54.493Z",
+        "object_repr": "LUU 22",
+        "object_id": "3",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 27
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:59:05.982Z",
+        "object_repr": "ZFE 13 (\u042f\u043a\u0456\u0432 \u0411\u043e\u0440\u0435\u0446\u044c)",
+        "object_id": "2",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 28
+},
+{
+    "fields": {
+        "action_flag": 2,
+        "action_time": "2015-03-13T15:59:17.385Z",
+        "object_repr": "LRR 44 (\u0406\u0432\u0430\u043d \u0421\u0438\u043b\u0430\u0447)",
+        "object_id": "1",
+        "change_message": "Changed title.",
+        "user": 2,
+        "content_type": 8
+    },
+    "model": "admin.logentry",
+    "pk": 29
+}
+]
