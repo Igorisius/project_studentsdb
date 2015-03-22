@@ -33,6 +33,10 @@ urlpatterns = patterns('',
     url(r'^journal/(?P<sid>\d+)/update/$',    'students.views.journal.journal_update',
         name='journal_update'),
 
+  # My Exam urls
+    url(r'^exams/$', 'students.views.exams.exams_list', name='exams'),
+
+
     url(r'^admin/', include(admin.site.urls)),
 )
 

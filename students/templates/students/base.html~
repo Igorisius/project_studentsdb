@@ -25,7 +25,7 @@
     <!-- Start Header -->
     <div class="row" id="header"> 
       <div class="col-xs-8">
-       <h1>Сервіс Обліку Студентів {% block logo %}{% endblock logo %}</h1>
+       <h1>{% block logo %} Сервіс Обліку Студентів {% endblock logo %}</h1>
       </div>
       <div class="col-xs-4" id="group-selector">{% block groups_menu %}
         <strong>Група:</strong>
@@ -48,6 +48,9 @@
 <li role="presentation" {% if '/groups' in request.path %}
 class="active"{% endif %}>
 <a href="{% url "groups" %}">Групи</a></li>
+<li role="presentation" {% if '/exams' in request.path %}
+class="active"{% endif %}>
+<a href="{% url "exams" %}"></a></li>
      </ul>
   </div>
 </div>
