@@ -8,6 +8,10 @@
 
 {% block content %}
 
+<!-- Add Exam Button -->
+     <a class="btn btn-primary" href="#">Додати Екзамен</a>
+     <div><!-- Start Students Listing -->
+
 {% with order_by=request.GET.order_by reverse=request.GET.reverse %}
 <table class="table table-hover table-striped">
 <thead>
@@ -39,7 +43,7 @@
 <tbody>
     {% for exam in exams %}
    <tr>
-    <td>{{ forloop.counter }}</td>
+    <td>{{ exam.id }}</td>
      <td><a href="{% url "exams" %}">{{ exam.exam_name }}</td>
         <td><a href="{% url "exams" %}">{{ exam.teacher_name }}</td>
         <td>{{ exam.exam_day }}</td>

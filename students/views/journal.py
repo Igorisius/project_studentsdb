@@ -6,13 +6,13 @@ from django.http import HttpResponse
 def journal_list(request):
     journal = (
         {'id': 1,
-        'student_name_last_name': u'Петро Білочка'},
+        'last_name': u'Петро Білочка'},
         {'id': 2,
-        'student_name_last_name': u'Іван Іванович'},
+        'last_name': u'Іван Іванович'},
         {'id': 3,
-        'student_name_last_name': u'Михайло Пилипенко'},
+        'last_name': u'Михайло Пилипенко'},
         {'id': 4,
-        'student_name_last_name': u'Хтоб Небув'},
+        'last_name': u'Хтоб Небув'},
     )
     return render(request, 'students/journal_list.html',
         {'journal': journal})
