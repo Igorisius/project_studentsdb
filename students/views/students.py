@@ -6,6 +6,8 @@ from django.core.urlresolvers import reverse
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 from datetime import datetime
+from django.contrib import messages
+from PIL import Image
 
 from ..models import Student, Group
 
@@ -34,7 +36,6 @@ def students_list(request):
         # last page of results.
         students = paginator.page(paginator.num_pages)
 
-
     
     return render(request, 'students/students_list.html',
         {'students': students})
@@ -42,12 +43,12 @@ def students_list(request):
 def students_add(request):
 # якщо форма була запощена
     if request.method == "POST":
-  # якщо кнопка додати натиснута
+      # якщо кнопка додати натиснута
         if request.POST.get('add_button') is not None:
        # перевіряємо дані на коректність та збираємо помилки
             errors = {}
 # data for student object
-            data= {'middle_name': request.POST.get('middle_name'),
+            data = {'middle_name': request.POST.get('middle_name'),
                     'notes': request.POST.get('notes')}
 # validate user input
             first_name = request.POST.get('first_name', '').strip()
@@ -89,15 +90,24 @@ def students_add(request):
                 else:
                     data['student_group'] = groups[0]
 
-            photo = request.FILES.get('photo')
-            if photo:
-                data['photo'] = photo
+            photo = request.FILES.get('photo', '')
+            if not photo:
+                errors['photo'] = u"Очевидно, ви ще не завантажили фото студента"
+            else:
+                    im = Image.open(photo)
+                    if im.format not in ('JPEG', 'PNG'):
+                        errors['photo'] = u"завантажте фото з розширенням jpeg або png"
+                    if photo.size > 3145728:
+                        errors['photo'] = u"максимальний розмір фото - 3 мб"
+                    else:
+                        data['photo'] = photo
        #save student
             if not errors:
                 student = Student(**data)
                 student.save()
-#redirect to student_list
-                return HttpResponseRedirect(reverse('home'))
+                # status message
+                #redirect to student_list
+                return HttpResponseRedirect(u'%s?status_message=Студента %s %s успішно додано' % (reverse('home'), first_name, last_name))
             else:
 # віддаємо шаблон разом із знайденими помилками
                 return render(request, 'students/students_add.html', 
@@ -106,7 +116,8 @@ def students_add(request):
 
         elif request.POST.get('cancel_button') is not None:
 # redirect to home page on cancel button
-            return HttpResponseRedirect(reverse('home'))
+            return HttpResponseRedirect(u'%s?status_message=Додавання студента скасовано!' %
+reverse('home'))
     else:
 # повертаємо код початкового стану форми
         return render(request, 'students/students_add.html',

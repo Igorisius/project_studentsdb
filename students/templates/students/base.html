@@ -41,14 +41,14 @@
 <!-- Start SubHeader -->
 <div class="row" id="sub-header">
 <div class="col-xs-12">
-<ul class="nav nav-tabs" role="tablist">
+<ul class="nav nav-tabs" class="btn btn-primary" role="tablist">
 <li role="presentation" {% if request.path == '/' %}class="active"{% endif %}><a href="{% url "home" %}">Студенти</a></li>
-<li role="presentation" {% if '/journal' in request.path %}class="active"{% endif %}>
+<li role="presentation"  {% if '/journal' in request.path %}class="active"{% endif %}>
 <a href="/journal">Відвідування</a></li>
-<li role="presentation" {% if '/groups' in request.path %}
+<li role="presentation"  {% if '/groups' in request.path %}
 class="active"{% endif %}>
 <a href="{% url "groups" %}">Групи</a></li>
-<li role="presentation" {% if '/exams' in request.path %}
+<li role="presentation"  {% if '/exams' in request.path %}
 class="active"{% endif %}>
 <a href="{% url "exams" %}">Іспити</a></li>
      </ul>
@@ -60,10 +60,14 @@ class="active"{% endif %}>
 		<div class="row" id="content-columns">
 		<div class="col-xs-12" id="content-column">
 
-{% comment "Not used alert so far" %}
-<div class="alert alert-warning" role="alert">Status Update!\
+
+    {% block status_message %}
+    {% if request.GET.status_message %}
+<div class="alert alert-warning" role="alert">{{ request.GET.status_message }}
+    {% endif %}
+    {% endblock %}
 </div>
-{% endcomment %}
+
 
 <h2>{% block title %}{% endblock title %}</h2>
     {% block content %}{% endblock content %}
